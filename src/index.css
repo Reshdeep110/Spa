@@ -1,0 +1,295 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background: #fffafc;
+  color: #333;
+}
+
+/* navbar  */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 32px;
+  background: #ff6b81;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffe6ea;
+}
+
+/* hero  */
+
+.hero {
+  height: 78vh;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg")
+    no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 44px;
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.cta-btn {
+  background: #ff6b81;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 26px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.cta-btn:hover {
+  background: #e05670;
+}
+
+.cta-secondary {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 12px 22px;
+  border-radius: 26px;
+  border: 2px solid rgba(255,255,255,0.3);
+  color: white;
+  text-decoration: none;
+  align-self: center;
+  font-weight: 600;
+}
+
+/* service  */
+.services {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.services h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.service-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex: 1 1 280px;
+  background: #fffafc;
+  padding: 26px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.25s;
+  min-width: 220px;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.service-card h3 {
+  color: #ff6b81;
+  margin-bottom: 10px;
+}
+
+/* contact form  */
+.contact {
+  background: #ffeef2;
+  padding: 60px 20px;
+}
+
+.contact h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+  color: #444;
+}
+
+.contact-form, .modal-form {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact input,
+.contact textarea,
+.modal input,
+.modal textarea,
+.modal select,
+.contact select {
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.contact textarea, .modal textarea {
+  resize: vertical;
+  height: 110px;
+}
+
+
+.btn-primary {
+  background: #ff6b81;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-primary:hover {
+  background: #e05670;
+}
+
+.error {
+  color: #b00020;
+}
+
+.success {
+  color: #0b8043;
+}
+
+/* booking list  */
+.bookings-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: 12px auto 60px auto;
+}
+
+.booking-card {
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.booking-service {
+  background: #fff0f2;
+  color: #ff6b81;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* modal  */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal {
+  width: 520px;
+  max-width: 92%;
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal h3 {
+  margin-bottom: 8px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* footer  */
+
+
+.footer {
+  background: #ff6b81;
+  color: white;
+  text-align: center;
+  padding: 18px;
+}
+
+.footer .socials a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+.footer .socials a:hover {
+  color: #ffe6ea;
+}
+
+
+
